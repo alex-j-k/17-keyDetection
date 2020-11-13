@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+    const pressed = [];
+    const secretCode = 'six';
+
+//     // window.addEventListener('keyup', (event) => {
+//     //     console.log(event.key);
+//     //     pressedKeys.push(event.key);
+//     //     console.log(pressedKeys);
+//     //     pressedKeys.splice(-secretCode.length, pressedKeys.length - secretCode.length + 1);
+//     //     if (pressedKeys.join('').includes(secretCode)){
+//     //         console.log('YOUR GUESSED RIGHT¡¡¡!!!!');
+//     //         cornify_add();
+//     //     }
+//     //     })
+
+
+        window.addEventListener('keyup', (event) => {
+        console.log(event.key);
+        pressed.push(event.key);
+        pressed.splice(-secretCode.length -1 , pressed.length - secretCode.length );
+        if (pressed.join('').includes(secretCode)){
+            console.log('YOUR GUESSED RIGHT¡¡¡!!!!');
+            cornify_add();
+        }
+        console.log(pressed)
+        });
+    
+
+
+// const pressed = [];
+// const secretCode = 'wesbos';
+
+// window.addEventListener('keyup', (e) => {
+//   console.log(e.key);
+//   pressed.push(e.key);
+//   pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length);
+//   if (pressed.join('').includes(secretCode)) {
+//     console.log('DING DING!');
+//     cornify_add();
+//   }
+//   console.log(pressed);
+// });
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
